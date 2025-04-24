@@ -18,10 +18,12 @@
       font-size: 3em;
       margin-bottom: 20px;
       text-shadow: 0 0 10px #00ff00;
+      animation: fadeIn 2s ease-out;
     }
 
     p {
       font-size: 1.5em;
+      animation: blink 1.5s infinite;
     }
 
     .button {
@@ -48,8 +50,36 @@
     }
 
     img {
-      width: 300px; /* Примерный размер изображения */
+      width: 300px; /* Размер картинки */
       margin-top: 30px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Анимация появления текста */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Анимация мигания текста */
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -61,7 +91,7 @@
 
   <a href="https://minecraft.net" class="button" target="_blank">Погнали!</a>
 
-  <!-- Пример добавления картинки -->
+  <!-- Картинка под кнопкой -->
   <img src="https://example.com/your-image.png" alt="Minecraft Image">
 </body>
 </html>
