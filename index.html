@@ -18,12 +18,14 @@
       font-size: 3em;
       margin-bottom: 20px;
       text-shadow: 0 0 10px #00ff00;
-      animation: fadeIn 2s ease-out;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
     }
 
     p {
       font-size: 1.5em;
-      animation: blink 1.5s infinite;
+      opacity: 0;
+      animation: fadeIn 3s 1s forwards; /* Задержка для появления текста */
     }
 
     .button {
@@ -66,19 +68,6 @@
       100% {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-
-    /* Анимация мигания текста */
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
       }
     }
   </style>
